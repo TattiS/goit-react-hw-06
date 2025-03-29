@@ -1,0 +1,29 @@
+.containerContact {
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 28px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  border: 1px solid #535bf2;
+  border-radius: 8px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fieldWrapper {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  justify-content: start;
+  align-items: center;
+  fill: #ffffff;
+}
+.btnDelete {
+  width: 88px;
+  height: 40px;
+}
