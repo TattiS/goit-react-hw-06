@@ -11,13 +11,13 @@ function Contact({ contactInfo }) {
       <div className={css.infoContainer}>
         <div className={css.fieldWrapper}>
           <svg width={20} height={20}>
-            <use href="/src/img/sprite.svg#icon-user"></use>
+            <use href="../../img/sprite.svg#icon-user"></use>
           </svg>
           <p className={css.txtUsername}>{contactInfo.name}</p>
         </div>
         <div className={css.fieldWrapper}>
           <svg width={20} height={20}>
-            <use href="/src/img/sprite.svg#icon-phone"></use>
+            <use href="../../img/sprite.svg#icon-phone"></use>
           </svg>
           <p className={css.txtPhone}>{contactInfo.number}</p>
         </div>
