@@ -1,6 +1,11 @@
 import css from "./Contact.module.css";
+import { useDispatch } from "react-redux";
+import { createAction } from "@reduxjs/toolkit";
 
-function Contact({ contactInfo, onDelete }) {
+function Contact({ contactInfo }) {
+  const deleteContactAF = createAction("contacts/deleteContact");
+  const dispatch = useDispatch();
+
   return (
     <li className={css.containerContact}>
       <div className={css.infoContainer}>
@@ -20,7 +25,7 @@ function Contact({ contactInfo, onDelete }) {
       <button
         className={css.btnDelete}
         onClick={() => {
-          onDelete(contactInfo.id);
+          dispatch(deleteContactAF(contactInfo.id));
         }}
       >
         Delete

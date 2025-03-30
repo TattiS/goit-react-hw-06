@@ -1,8 +1,14 @@
 import css from "./SearchBox.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { createAction } from "@reduxjs/toolkit";
 
-function SearchBox({ inputValue, setInputValue }) {
+function SearchBox() {
+  const changeFilterAF = createAction("filters/changeFilter");
+  const dispatch = useDispatch();
+  const filter = useSelector((state) => state.filters.name);
+
   const handleChange = (event) => {
-    setInputValue(event.target.value);
+    dispatch(changeFilterAF(event.target.value));
   };
   return (
     <div className={css.searchBoxContainer}>
@@ -13,7 +19,7 @@ function SearchBox({ inputValue, setInputValue }) {
         id="searchBoxInput"
         className={css.searchBoxInput}
         type="text"
-        value={inputValue}
+        value={filter}
         onChange={handleChange}
       />
     </div>
